@@ -1,5 +1,5 @@
 <x-app>
-    <form action="{{ $user->path() }}" method="POST">
+    <form method="POST" action="{{ $user->path() }}" enctype="multipart/form-data">
         @csrf
         @method('PATCH')
 
@@ -44,6 +44,7 @@
                 <p class="text-red-500 text-xs mt-2">{{ $message }}</p>
             @enderror
         </div>
+
 
         <div class="mb-6">
             <label class="block mb-2 uppercase font-bold text-xs text-gray-700" for="email">
